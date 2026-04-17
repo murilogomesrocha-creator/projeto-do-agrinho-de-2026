@@ -8,26 +8,40 @@
 </head>
 <body>
     <header>
-        <h1>🍅 Tomateiro Sustentável 2026</h1>
-        <p>Equilíbrio entre Produção e Meio Ambiente</p>
+        <div class="logo-agrinho">Agrinho 2026</div>
+        <h1>🍅 Estufa de Tomate Sustentável</h1>
+        <p>Agro Forte, Futuro Sustentável: Equilíbrio e Tecnologia</p>
     </header>
 
-    <main class="dashboard">
-        <section class="sensor-card">
-            <h2>Umidade do Solo</h2>
-            <div class="value" id="umidade">45%</div>
-            <p id="status-agua">Status: Solo Seco</p>
+    <main class="container">
+        <section class="estufa-visual">
+            <div class="telhado"></div>
+            <div class="estrutura">
+                <div class="planta">🍅</div>
+                <div class="planta">🍅</div>
+                <div class="planta">🍅</div>
+            </div>
+            <div class="solo"></div>
+            <div id="chuva-animada" class="chuva"></div>
         </section>
 
-        <section class="sensor-card">
-            <h2>Temperatura</h2>
-            <div class="value" id="temp">24°C</div>
-            <p id="status-clima">Status: Ideal</p>
-        </section>
+        <div class="dashboard">
+            <div class="sensor-card">
+                <h3>Umidade do Solo</h3>
+                <div class="value" id="umidade">45%</div>
+                <p id="status-agua">Solo Seco</p>
+            </div>
 
-        <section class="controls">
-            <button onclick="irrigar()">Ativar Irrigação Eco</button>
-            <p>Sistema utiliza 30% menos água via gotejamento.</p>
+            <div class="sensor-card">
+                <h3>Temperatura</h3>
+                <div class="value" id="temp">24°C</div>
+                <p id="status-clima">Status: Ideal</p>
+            </div>
+        </div>
+
+        <section class="actions">
+            <button class="btn-irrigar" onclick="irrigar()">Ativar Irrigação Inteligente</button>
+            <p class="info-sustentavel">🌱 Sistema utiliza água da chuva captada e energia solar.</p>
         </section>
     </main>
 
