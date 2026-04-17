@@ -1,26 +1,22 @@
-/* Ajuste para a imagem dentro da estufa */
-.imagem-estufa {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Faz a imagem preencher o espaço sem distorcer */
-    opacity: 0.9;
-    border-radius: 5px 5px 0 0;
-    transition: transform 0.3s ease;
+/* Estilo do botão de informações */
+.btn-info {
+    background-color: transparent;
+    color: var(--verde-agrinho);
+    border: 2px solid var(--verde-agrinho);
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 10px;
+    transition: 0.3s;
 }
 
-.estufa-visual:hover .imagem-estufa {
-    transform: scale(1.05); /* Pequeno efeito de zoom ao passar o mouse */
-    opacity: 1;
+.btn-info:hover {
+    background-color: var(--verde-agrinho);
+    color: white;
 }
 
-/* Ajuste a altura da estufa se a imagem for muito grande */
-.estufa-visual {
-    position: relative;
-    width: 320px;
-    height: 200px; /* Aumentei um pouco para a imagem aparecer melhor */
-    margin: 20px auto;
-    border: 4px solid #90caf9;
-    border-radius: 10px 10px 0 0;
-    overflow: hidden;
-    background: #fff;
+/* Ajuste para a rolagem ser suave */
+html {
+    scroll-behavior: smooth;
 }
