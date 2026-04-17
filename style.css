@@ -1,87 +1,26 @@
-/* Adicione ou substitua estas classes no seu arquivo CSS */
+/* Ajuste para a imagem dentro da estufa */
+.imagem-estufa {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a imagem preencher o espaço sem distorcer */
+    opacity: 0.9;
+    border-radius: 5px 5px 0 0;
+    transition: transform 0.3s ease;
+}
 
+.estufa-visual:hover .imagem-estufa {
+    transform: scale(1.05); /* Pequeno efeito de zoom ao passar o mouse */
+    opacity: 1;
+}
+
+/* Ajuste a altura da estufa se a imagem for muito grande */
 .estufa-visual {
     position: relative;
     width: 320px;
-    height: 220px;
-    margin: 40px auto;
-    background: rgba(255, 255, 255, 0.3); /* Efeito de vidro/plástico */
-    border: 3px solid #bdc3c7;
-    border-radius: 10px;
+    height: 200px; /* Aumentei um pouco para a imagem aparecer melhor */
+    margin: 20px auto;
+    border: 4px solid #90caf9;
+    border-radius: 10px 10px 0 0;
     overflow: hidden;
-}
-
-/* A Cobertura Superior */
-.cobertura-telhado {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    background: linear-gradient(180deg, rgba(173, 216, 230, 0.8) 0%, rgba(173, 216, 230, 0.2) 100%);
-    border-bottom: 2px solid #90caf9;
-    z-index: 2;
-    clip-path: polygon(0% 100%, 50% 0%, 100% 100%); /* Cria o formato triangular de telhado */
-}
-
-/* Viga de sustentação da cobertura *//* Adicione ou substitua estas classes no seu arquivo CSS */
-
-.estufa-visual {
-    position: relative;
-    width: 320px;
-    height: 220px;
-    margin: 40px auto;
-    background: rgba(255, 255, 255, 0.3); /* Efeito de vidro/plástico */
-    border: 3px solid #bdc3c7;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-/* A Cobertura Superior */
-.cobertura-telhado {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    background: linear-gradient(180deg, rgba(173, 216, 230, 0.8) 0%, rgba(173, 216, 230, 0.2) 100%);
-    border-bottom: 2px solid #90caf9;
-    z-index: 2;
-    clip-path: polygon(0% 100%, 50% 0%, 100% 100%); /* Cria o formato triangular de telhado */
-}
-
-/* Viga de sustentação da cobertura */
-.viga-central {
-    position: absolute;
-    left: 50%;
-    width: 4px;
-    height: 100%;
-    background: #7f8c8d;
-    transform: translateX(-50%);
-}
-
-.estrutura {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-    height: 100%;
-    padding-bottom: 20px;
-    padding-top: 60px; /* Dá espaço para as plantas ficarem abaixo do telhado */
-}
-.viga-central {
-    position: absolute;
-    left: 50%;
-    width: 4px;
-    height: 100%;
-    background: #7f8c8d;
-    transform: translateX(-50%);
-}
-
-.estrutura {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-    height: 100%;
-    padding-bottom: 20px;
-    padding-top: 60px; /* Dá espaço para as plantas ficarem abaixo do telhado */
+    background: #fff;
 }

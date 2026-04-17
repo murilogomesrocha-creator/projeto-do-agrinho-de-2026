@@ -1,29 +1,15 @@
-// Simulação de sensores
-function atualizarSensores() {
-    // Gera uma temperatura aleatória entre 20 e 30 graus
-    const tempAleatoria = Math.floor(Math.random() * (30 - 20 + 1)) + 20;
-    document.getElementById('temp').innerText = tempAleatoria + "°C";
-
-    const statusClima = document.getElementById('status-clima');
-    if (tempAleatoria > 28) {
-        statusClima.innerText = "Status: Abrindo Janelas Zenitais";
-        statusClima.style.color = "orange";
-    } else {
-        statusClima.innerText = "Status: Ideal";
-        statusClima.style.color = "green";
-    }
-}
-
 function irrigar() {
-    const umidadeDisplay = document.getElementById('umidade');
-    const statusAgua = document.getElementById('status-agua');
+    const chuva = document.getElementById('chuva-animada');
+    const umidade = document.getElementById('umidade');
+    const imagem = document.querySelector('.imagem-estufa');
     
-    umidadeDisplay.innerText = "80%";
-    statusAgua.innerText = "Status: Irrigação Concluída (Reuso)";
-    statusAgua.style.color = "blue";
-
-    alert("Irrigação por gotejamento ativada com água da chuva captada!");
+    chuva.style.display = "block";
+    imagem.style.filter = "brightness(0.8) sepia(0.2)"; // Efeito de "molhado"
+    
+    setTimeout(() => {
+        chuva.style.display = "none";
+        imagem.style.filter = "none"; // Volta ao normal
+        umidade.innerText = "85%";
+        alert("Irrigação sustentável concluída!");
+    }, 2000);
 }
-
-// Atualiza os sensores a cada 3 segundos
-setInterval(atualizarSensores, 3000);
