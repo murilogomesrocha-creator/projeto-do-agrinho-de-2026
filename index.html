@@ -1,24 +1,25 @@
 <section id="projeto">
-    <h2>Explore a Estufa Inteligente</h2>
+    <h2>Exploração 3D: Tecnologia e Sustentabilidade</h2>
     
     <div class="cenario">
-        <div class="estufa">
-            <div class="telhado" onclick="mostrarInfo('energia')">
-                <div class="painel-solar"></div>
-                <span>Energia Solar</span>
+        <div class="estufa-3d">
+            <div class="teto" onclick="mostrarInfo('energia')">
+                <div class="painel-solar-detalhe"></div>
             </div>
-            <div class="corpo">
-                <div class="planta" onclick="mostrarInfo('biologico')">🍅
-                    <span class="joaninha">🐞</span>
-                </div>
-                <div class="solo" onclick="mostrarInfo('agua')">
-                    <div class="gotas">💧</div>
-                </div>
+            
+            <div class="parede frontal">
+                <div class="tomateiro" onclick="mostrarInfo('biologico')">🍅</div>
+                <div class="tomateiro" onclick="mostrarInfo('biologico')">🍅</div>
+            </div>
+
+            <div class="chao" onclick="mostrarInfo('agua')">
+                <div class="tubo-irrigacao"></div>
+                <div class="sensor-umidade"></div>
             </div>
         </div>
     </div>
 
     <div id="info-box">
-        <p id="detalhe">Passe o mouse ou clique nos elementos da estufa!</p>
+        <p id="detalhe">Passe o mouse na estufa e clique nos itens para ver a tecnologia!</p>
     </div>
 </section>
