@@ -1,22 +1,67 @@
-/* Estilo do botão de informações */
-.btn-info {
-    background-color: transparent;
-    color: var(--verde-agrinho);
-    border: 2px solid var(--verde-agrinho);
-    padding: 12px 25px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    margin-left: 10px;
-    transition: 0.3s;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0fdf4;
+    color: #166534;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
-.btn-info:hover {
-    background-color: var(--verde-agrinho);
+header {
+    background-color: #ef4444; /* Vermelho Tomate */
     color: white;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-/* Ajuste para a rolagem ser suave */
-html {
-    scroll-behavior: smooth;
+h1 { margin: 0; font-size: 2.5rem; }
+
+main { padding: 20px; max-width: 800px; margin: auto; }
+
+.estufa-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+
+.componente {
+    background-color: #22c55e;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    font-weight: bold;
+    box-shadow: 5px 5px 0px #15803d;
+    margin: 10px;
+}
+
+.componente:hover {
+    transform: scale(1.1);
+    background-color: #16a34a;
+}
+
+#info-box {
+    background: white;
+    border: 2px solid #22c55e;
+    padding: 20px;
+    border-radius: 10px;
+    min-height: 80px;
+    margin-top: 20px;
+}
+
+.sustentabilidade {
+    background-color: #dcfce7;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 40px;
+    text-align: left;
+}
+
+footer {
+    margin-top: 50px;
+    padding: 10px;
+    font-size: 0.9rem;
+    color: #666;
 }

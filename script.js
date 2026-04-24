@@ -1,11 +1,16 @@
-// Função para rolar até a seção de texto
-function irParaTexto() {
-    const elemento = document.getElementById('secao-texto');
-    elemento.scrollIntoView({ behavior: 'smooth' });
+function mostrarInfo(tipo) {
+    const detalhe = document.getElementById('detalhe');
     
-    // Pequeno efeito visual para destacar o texto ao chegar
-    elemento.style.backgroundColor = "#e8f5e9";
-    setTimeout(() => {
-        elemento.style.backgroundColor = "#ffffff";
-    }, 1000);
+    const informacoes = {
+        'energia': "☀️ **Energia Solar:** Utilizamos painéis fotovoltaicos para alimentar os sensores e as bombas de água, tornando a estufa autossuficiente em energia limpa.",
+        'agua': "💧 **Irrigação por Gotejamento:** Sensores de umidade no solo dizem exatamente quanta água a planta precisa, evitando desperdícios e usando água da chuva captada.",
+        'biologico': "🐞 **Controle Biológico:** Em vez de agrotóxicos, usamos 'insetos do bem' (como joaninhas) para combater pragas naturalmente, mantendo o equilíbrio ambiental."
+    };
+
+    detalhe.innerHTML = informacoes[tipo];
+    
+    // Pequeno efeito visual ao clicar
+    const box = document.getElementById('info-box');
+    box.style.borderColor = "#ef4444";
+    setTimeout(() => { box.style.borderColor = "#22c55e"; }, 500);
 }
