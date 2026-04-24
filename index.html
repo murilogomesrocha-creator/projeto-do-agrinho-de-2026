@@ -1,25 +1,49 @@
-<section id="projeto">
-    <h2>Exploração 3D: Tecnologia e Sustentabilidade</h2>
-    
-    <div class="cenario">
-        <div class="estufa-3d">
-            <div class="teto" onclick="mostrarInfo('energia')">
-                <div class="painel-solar-detalhe"></div>
-            </div>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrinho 2026 - Estufa Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🍅 Estufa de Tomate Sustentável</h1>
+        <p>Agro forte, futuro sustentável!</p>
+    </header>
+
+    <main>
+        <section id="projeto">
+            <h2>Explore a Estufa do Futuro</h2>
+            <p>Clique nas partes da imagem 3D para entender a sustentabilidade!</p>
             
-            <div class="parede frontal">
-                <div class="tomateiro" onclick="mostrarInfo('biologico')">🍅</div>
-                <div class="tomateiro" onclick="mostrarInfo('biologico')">🍅</div>
+            <div class="container-interativo">
+                <img src="http://googleusercontent.com/image_generation_content/0" alt="Estufa 3D" class="imagem-estufa">
+                
+                <div class="area-click telhado" onclick="mostrarInfo('energia')" title="Energia Solar"></div>
+                <div class="area-click centro" onclick="mostrarInfo('biologico')" title="Plantas e Pragas"></div>
+                <div class="area-click base" onclick="mostrarInfo('agua')" title="Irrigação"></div>
             </div>
 
-            <div class="chao" onclick="mostrarInfo('agua')">
-                <div class="tubo-irrigacao"></div>
-                <div class="sensor-umidade"></div>
+            <div id="info-box">
+                <p id="detalhe">Clique na imagem para aprender!</p>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <div id="info-box">
-        <p id="detalhe">Passe o mouse na estufa e clique nos itens para ver a tecnologia!</p>
-    </div>
-</section>
+        <section class="sustentabilidade">
+            <h3>Pilar Agrinho: Equilíbrio</h3>
+            <ul>
+                <li><strong>Eficiência:</strong> Uso inteligente de recursos naturais.</li>
+                <li><strong>Resíduo Zero:</strong> Ciclo fechado de produção.</li>
+                <li><strong>Tecnologia:</strong> O campo conectado com o amanhã.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Projeto Agrinho 2026 | Produção e Meio Ambiente</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
