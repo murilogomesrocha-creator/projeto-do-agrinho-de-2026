@@ -1,16 +1,16 @@
 function mostrarInfo(tipo) {
     const detalhe = document.getElementById('detalhe');
     
-    const info = {
-        'energia': "☀️ <strong>Energia Solar:</strong> Painéis no topo geram energia limpa para sensores que controlam a temperatura, garantindo que o tomate cresça no clima perfeito.",
-        'biologico': "🐞 <strong>Controle Biológico:</strong> Usamos a natureza a nosso favor! As joaninhas ajudam a combater pragas sem a necessidade de venenos químicos.",
-        'agua': "💧 <strong>Irrigação por Gotejamento:</strong> A água vai direto na raiz, gota a gota. Isso economiza 90% de água e evita o desperdício no solo."
+    const mensagens = {
+        'energia': "☀️ <strong>Energia Solar:</strong> Captamos a luz solar para manter a temperatura ideal, reduzindo custos e pegada de carbono.",
+        'biologico': "🐞 <strong>Controle Biológico:</strong> Os tomates crescem saudáveis com a ajuda de predadores naturais de pragas, eliminando defensivos químicos.",
+        'agua': "💧 <strong>Irrigação Inteligente:</strong> O sistema de gotejamento entrega a umidade exata para as raízes, preservando nossos recursos hídricos."
     };
 
-    detalhe.innerHTML = info[tipo];
+    detalhe.innerHTML = mensagens[tipo];
     
-    // Pequena vibração visual no box de informação
+    // Pequeno efeito de feedback
     const box = document.getElementById('info-box');
-    box.style.transform = "translateY(-5px)";
-    setTimeout(() => { box.style.transform = "translateY(0)"; }, 150);
+    box.style.backgroundColor = "#e8f5e9";
+    setTimeout(() => { box.style.backgroundColor = "white"; }, 300);
 }

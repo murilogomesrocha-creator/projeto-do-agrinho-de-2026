@@ -14,39 +14,33 @@
 
     <main>
         <section id="projeto">
-            <h2>Interaja com a Nossa Produção</h2>
-            <p>Clique nos componentes da estufa para ver a tecnologia em ação.</p>
+            <h2>Tecnologia e Equilíbrio</h2>
+            <p>Clique nos elementos da estufa para entender o funcionamento sustentável.</p>
             
             <div class="container-interativo">
                 <svg width="400" height="320" viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg" class="svg-estufa">
                     <rect x="0" y="260" width="400" height="60" fill="#5d4037" />
                     
-                    <path d="M 40 260 L 40 100 Q 200 0 360 100 L 360 260 Z" fill="rgba(224, 247, 250, 0.4)" stroke="#90a4ae" stroke-width="3"/>
+                    <path d="M 40 260 L 40 100 Q 200 0 360 100 L 360 260 Z" fill="rgba(224, 247, 250, 0.5)" stroke="#90a4ae" stroke-width="3"/>
 
                     <g id="solar" class="item-interativo" onclick="mostrarInfo('energia')">
                         <rect x="130" y="30" width="140" height="35" fill="#1a237e" rx="5" />
-                        <line x1="130" y1="47" x2="270" y2="47" stroke="white" stroke-width="1" opacity="0.5"/>
-                        <line x1="165" y1="30" x2="165" y2="65" stroke="white" stroke-width="1" opacity="0.5"/>
-                        <line x1="200" y1="30" x2="200" y2="65" stroke="white" stroke-width="1" opacity="0.5"/>
-                        <line x1="235" y1="30" x2="235" y2="65" stroke="white" stroke-width="1" opacity="0.5"/>
+                        <line x1="130" y1="47" x2="270" y2="47" stroke="white" stroke-width="1" opacity="0.4"/>
+                        <line x1="165" y1="30" x2="165" y2="65" stroke="white" stroke-width="1" opacity="0.4"/>
+                        <line x1="200" y1="30" x2="200" y2="65" stroke="white" stroke-width="1" opacity="0.4"/>
                     </g>
 
                     <g id="plants" class="item-interativo" onclick="mostrarInfo('biologico')">
-                        <path d="M 100 260 Q 90 180 100 120" stroke="#2e7d32" stroke-width="4" fill="none"/>
-                        <circle cx="92" cy="200" r="8" fill="#d32f2f" class="tomate" />
-                        <circle cx="108" cy="160" r="8" fill="#d32f2f" class="tomate" />
-                        <path d="M 100 140 L 115 130" stroke="#2e7d32" stroke-width="2"/>
+                        <path d="M 100 260 L 100 130" stroke="#2e7d32" stroke-width="4" fill="none"/>
+                        <circle cx="92" cy="210" r="8" fill="#d32f2f" /> <circle cx="108" cy="170" r="8" fill="#d32f2f" /> <path d="M 200 260 L 200 110" stroke="#2e7d32" stroke-width="4" fill="none"/>
+                        <circle cx="190" cy="230" r="9" fill="#d32f2f" />
+                        <circle cx="210" cy="190" r="9" fill="#d32f2f" />
+                        <circle cx="190" cy="150" r="9" fill="#d32f2f" />
+                        <circle cx="200" cy="130" r="4" fill="red" stroke="black" />
 
-                        <path d="M 200 260 Q 210 180 200 110" stroke="#2e7d32" stroke-width="4" fill="none"/>
-                        <circle cx="195" cy="220" r="9" fill="#d32f2f" class="tomate" />
-                        <circle cx="210" cy="180" r="9" fill="#d32f2f" class="tomate" />
-                        <circle cx="195" cy="140" r="9" fill="#d32f2f" class="tomate" />
-                        <circle cx="215" cy="180" r="4" fill="red" stroke="black" />
-                        <circle cx="215" cy="180" r="1" fill="black" />
-
-                        <path d="M 300 260 Q 290 180 300 120" stroke="#2e7d32" stroke-width="4" fill="none"/>
-                        <circle cx="292" cy="190" r="8" fill="#d32f2f" class="tomate" />
-                        <circle cx="308" cy="230" r="8" fill="#d32f2f" class="tomate" />
+                        <path d="M 300 260 L 300 130" stroke="#2e7d32" stroke-width="4" fill="none"/>
+                        <circle cx="292" cy="200" r="8" fill="#d32f2f" />
+                        <circle cx="308" cy="160" r="8" fill="#d32f2f" />
                     </g>
 
                     <g id="irrigation" class="item-interativo" onclick="mostrarInfo('agua')">
@@ -59,13 +53,13 @@
             </div>
 
             <div id="info-box">
-                <p id="detalhe">Clique nas partes da estufa para descobrir!</p>
+                <p id="detalhe">Clique na estufa para ver as informações sustentáveis.</p>
             </div>
         </section>
 
         <section class="sustentabilidade">
-            <h3>Pilar Agrinho: Equilíbrio Sustentável</h3>
-            <p>Este projeto foca no uso racional dos recursos para garantir o alimento de amanhã.</p>
+            <h3>Equilíbrio entre Produção e Meio Ambiente</h3>
+            <p>O futuro do agro depende de tecnologias que respeitem o ciclo da natureza.</p>
         </section>
     </main>
 
