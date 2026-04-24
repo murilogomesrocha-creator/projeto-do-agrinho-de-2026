@@ -24,14 +24,13 @@ header {
 
 .item-interativo {
     cursor: pointer;
+    transition: filter 0.2s;
 }
 
-/* Efeito apenas de realce ao passar o mouse, sem mover os tomates */
 .item-interativo:hover {
-    filter: brightness(1.1);
+    filter: brightness(1.1) saturate(1.2);
 }
 
-/* Animação apenas para as gotas de água */
 .gota {
     animation: cair 2s infinite linear;
 }
@@ -51,6 +50,7 @@ header {
     margin: 0 auto;
     font-size: 1.1rem;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    min-height: 80px;
 }
 
 .sustentabilidade {
