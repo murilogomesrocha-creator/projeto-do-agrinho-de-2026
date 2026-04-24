@@ -1,17 +1,72 @@
-/* Animação para os tomates pulsarem levemente */
-#tomato-plants circle[fill="#ef4444"] {
-    animation: pulsarTomate 2s infinite ease-in-out;
-    transform-origin: center;
-    transform-box: fill-box;
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f1f8e9;
+    color: #1b5e20;
+    margin: 0;
+    text-align: center;
 }
 
-@keyframes pulsarTomate {
+header {
+    background-color: #d32f2f;
+    color: white;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.container-interativo {
+    background: white;
+    display: inline-block;
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin: 20px auto;
+}
+
+.item-interativo {
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.item-interativo:hover {
+    opacity: 0.8;
+}
+
+/* Animação dos Tomates */
+.tomate {
+    animation: pulsar 2s infinite ease-in-out;
+}
+
+@keyframes pulsar {
     0% { transform: scale(1); filter: brightness(1); }
     50% { transform: scale(1.1); filter: brightness(1.2); }
     100% { transform: scale(1); filter: brightness(1); }
 }
 
-/* Deixa o fundo da estufa com cara de vidro moderno */
-.svg-estufa {
-    filter: drop-shadow(0px 5px 15px rgba(0,0,0,0.1));
+/* Animação da Irrigação */
+.gota {
+    animation: cair 1.5s infinite;
+}
+
+@keyframes cair {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(10px); opacity: 0; }
+}
+
+#info-box {
+    background: white;
+    border-left: 10px solid #4caf50;
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 20px auto;
+    font-size: 1.2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.sustentabilidade {
+    background: #c8e6c9;
+    padding: 20px;
+    max-width: 600px;
+    margin: 40px auto;
+    border-radius: 15px;
 }
