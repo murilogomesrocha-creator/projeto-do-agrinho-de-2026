@@ -1,47 +1,24 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agrinho 2026 - Estufa Sustentável</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>🍅 Estufa de Tomate Sustentável</h1>
-        <p>Agro forte, futuro sustentável!</p>
-    </header>
-
-    <main>
-        <section id="projeto">
-            <h2>Como funciona o equilíbrio?</h2>
-            <p>Clique nos componentes abaixo para entender como produzimos mais agredindo menos o meio ambiente.</p>
-            
-            <div class="estufa-container">
-                <div class="componente" onclick="mostrarInfo('energia')">☀️ Painel Solar</div>
-                <div class="componente" onclick="mostrarInfo('agua')">💧 Irrigação Inteligente</div>
-                <div class="componente" onclick="mostrarInfo('biologico')">🐞 Controle Biológico</div>
+<section id="projeto">
+    <h2>Explore a Estufa Inteligente</h2>
+    
+    <div class="cenario">
+        <div class="estufa">
+            <div class="telhado" onclick="mostrarInfo('energia')">
+                <div class="painel-solar"></div>
+                <span>Energia Solar</span>
             </div>
-
-            <div id="info-box">
-                <p id="detalhe">Clique em um componente acima para aprender!</p>
+            <div class="corpo">
+                <div class="planta" onclick="mostrarInfo('biologico')">🍅
+                    <span class="joaninha">🐞</span>
+                </div>
+                <div class="solo" onclick="mostrarInfo('agua')">
+                    <div class="gotas">💧</div>
+                </div>
             </div>
-        </section>
+        </div>
+    </div>
 
-        <section class="sustentabilidade">
-            <h3>Por que isso é o futuro?</h3>
-            <ul>
-                <li><strong>Eficiência:</strong> Usamos 90% menos água que o plantio convencional.</li>
-                <li><strong>Resíduo Zero:</strong> Transformamos restos orgânicos em adubo.</li>
-                <li><strong>Tecnologia:</strong> Sensores monitoram a planta 24h por dia.</li>
-            </ul>
-        </section>
-    </main>
-
-    <footer>
-        <p>Projeto Agrinho 2026 | Equilíbrio e Produção</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+    <div id="info-box">
+        <p id="detalhe">Passe o mouse ou clique nos elementos da estufa!</p>
+    </div>
+</section>
