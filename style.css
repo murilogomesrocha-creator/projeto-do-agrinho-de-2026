@@ -16,32 +16,41 @@ header {
 .container-interativo {
     background: white;
     display: inline-block;
-    padding: 20px;
+    padding: 25px;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
     margin: 20px auto;
 }
 
 .item-interativo {
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
 }
 
 .item-interativo:hover {
-    filter: brightness(1.1);
-    transform: scale(1.01);
+    filter: brightness(1.05);
+    transform: translateY(-2px);
 }
 
 #info-box {
     background: #ffffff;
-    border-left: 10px solid #4caf50;
+    border-left: 8px solid #4caf50;
     padding: 20px;
     border-radius: 10px;
-    max-width: 550px;
+    max-width: 500px;
     margin: 20px auto;
     font-size: 1.1rem;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    min-height: 90px;
+    min-height: 80px;
+}
+
+.sustentabilidade {
+    background: #ffffff;
+    padding: 20px;
+    max-width: 650px;
+    margin: 30px auto;
+    border-radius: 15px;
+    border: 1px solid #c8e6c9;
 }
 
 .gota {

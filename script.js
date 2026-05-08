@@ -2,15 +2,15 @@ function mostrarInfo(tipo) {
     const detalhe = document.getElementById('detalhe');
     
     const mensagens = {
-        'energia': "☀️ <strong>Energia Solar:</strong> Sustenta os sensores de umidade para todos os 8 setores da plantação.",
-        'biologico': "🐞 <strong>Super Produção:</strong> Com 8 pés de tomate, mostramos que é possível produzir muito alimento em pouco espaço usando controle biológico (sem venenos).",
-        'agua': "💧 <strong>Irrigação Coletiva:</strong> O sistema distribui água de forma igual para cada pé de tomate, economizando recursos hídricos.",
-        'pessoas': "👨‍🌾 <strong>Trabalhadores Protegidos:</strong> O uso de chapéu garante a saúde da nossa equipe enquanto eles cuidam dessa grande colheita!"
+        'energia': "☀️ <strong>Energia Solar:</strong> Sustenta os sistemas que garantem a qualidade dos frutos colhidos.",
+        'biologico': "🐞 <strong>Equilíbrio:</strong> A joaninha protege a plantação, permitindo que os cestos fiquem cheios de tomates saudáveis.",
+        'agua': "💧 <strong>Irrigação:</strong> Eficiência hídrica para que cada pé produza o máximo com o mínimo de água.",
+        'pessoas': "🧺 <strong>A Colheita:</strong> Os cestos (sextos) cheios mostram o sucesso do manejo sustentável. É a recompensa do trabalho em harmonia com o meio ambiente!"
     };
 
     detalhe.innerHTML = mensagens[tipo];
     
     const box = document.getElementById('info-box');
-    box.style.backgroundColor = "#f1f8e9";
+    box.style.backgroundColor = "#e8f5e9";
     setTimeout(() => { box.style.backgroundColor = "white"; }, 300);
 }
