@@ -2,10 +2,10 @@ function mostrarInfo(tipo) {
     const detalhe = document.getElementById('detalhe');
     
     const mensagens = {
-        'energia': "☀️ <strong>Energia Solar:</strong> Sustenta os sistemas que garantem a qualidade dos frutos colhidos.",
-        'biologico': "🐞 <strong>Equilíbrio:</strong> A joaninha protege a plantação, permitindo que os cestos fiquem cheios de tomates saudáveis.",
-        'agua': "💧 <strong>Irrigação:</strong> Eficiência hídrica para que cada pé produza o máximo com o mínimo de água.",
-        'pessoas': "🧺 <strong>A Colheita:</strong> Os cestos (sextos) cheios mostram o sucesso do manejo sustentável. É a recompensa do trabalho em harmonia com o meio ambiente!"
+        'energia': "☀️ <strong>Eficiência Energética:</strong> Painéis ampliados para sustentar uma estufa maior e mais tecnológica.",
+        'biologico': "🐞 <strong>Super Safra:</strong> Graças ao manejo sustentável, nossos galhos estão carregados com cachos de tomates saudáveis!",
+        'agua': "💧 <strong>Hidratação Total:</strong> Sistema de irrigação que cobre toda a extensão da estufa, garantindo água para todos os frutos.",
+        'pessoas': "🧺 <strong>Colheita Recorde:</strong> Com mais tomates por galho, nossos cestos ficam cheios rapidamente. É o agro forte em ação!"
     };
 
     detalhe.innerHTML = mensagens[tipo];
