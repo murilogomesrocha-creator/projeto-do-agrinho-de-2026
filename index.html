@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agrinho 2026 - Produção Sustentável</title>
+    <title>Agrinho 2026 - Super Estufa</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,57 +14,56 @@
 
     <main>
         <section id="projeto">
-            <h2>Pessoas, Tecnologia e Cuidado</h2>
-            <p>Clique nos personagens ou na estufa para interagir.</p>
+            <h2>Alta Produtividade e Tecnologia</h2>
+            <p>Clique na plantação, nas pessoas ou no telhado para explorar!</p>
             
             <div class="container-interativo">
-                <svg width="450" height="320" viewBox="0 0 450 320" xmlns="http://www.w3.org/2000/svg" class="svg-estufa">
-                    <rect x="0" y="260" width="450" height="60" fill="#5d4037" />
+                <svg width="550" height="350" viewBox="0 0 550 350" xmlns="http://www.w3.org/2000/svg" class="svg-estufa">
+                    <rect x="0" y="280" width="550" height="70" fill="#5d4037" />
                     
-                    <path d="M 30 260 L 30 100 Q 225 0 420 100 L 420 260 Z" fill="rgba(224, 247, 250, 0.4)" stroke="#90a4ae" stroke-width="3"/>
+                    <path d="M 20 280 L 20 120 Q 275 0 530 120 L 530 280 Z" fill="rgba(224, 247, 250, 0.4)" stroke="#90a4ae" stroke-width="3"/>
 
                     <g id="solar" class="item-interativo" onclick="mostrarInfo('energia')">
-                        <rect x="155" y="30" width="140" height="30" fill="#1a237e" rx="5" />
-                        <line x1="155" y1="45" x2="295" y2="45" stroke="white" stroke-width="1" opacity="0.4"/>
+                        <rect x="205" y="30" width="140" height="30" fill="#1a237e" rx="5" />
+                        <line x1="205" y1="45" x2="345" y2="45" stroke="white" stroke-width="1" opacity="0.4"/>
                     </g>
 
                     <g id="plants" class="item-interativo" onclick="mostrarInfo('biologico')">
-                        <path d="M 80 260 L 80 140" stroke="#2e7d32" stroke-width="3" fill="none"/>
-                        <circle cx="80" cy="200" r="7" fill="#d32f2f" />
-                        <path d="M 140 260 L 140 120" stroke="#2e7d32" stroke-width="3" fill="none"/>
-                        <circle cx="140" cy="180" r="7" fill="#d32f2f" />
-                        <path d="M 225 260 L 225 100" stroke="#2e7d32" stroke-width="4" fill="none"/>
-                        <circle cx="225" cy="150" r="8" fill="#d32f2f" />
-                        <circle cx="225" cy="110" r="3" fill="red" stroke="black" />
+                        <g transform="translate(60,0)"> <path d="M 0 280 L 0 160" stroke="#2e7d32" stroke-width="3" fill="none"/><circle cx="0" cy="220" r="7" fill="#d32f2f" /><path d="M -5 212 L 0 205 L 5 212 Z" fill="#1b5e20" /></g>
+                        <g transform="translate(110,0)"> <path d="M 0 280 L 0 140" stroke="#2e7d32" stroke-width="3" fill="none"/><circle cx="0" cy="190" r="7" fill="#d32f2f" /></g>
+                        <g transform="translate(160,0)"> <path d="M 0 280 L 0 150" stroke="#2e7d32" stroke-width="3" fill="none"/><circle cx="0" cy="210" r="7" fill="#d32f2f" /><ellipse cx="-10" cy="180" rx="8" ry="4" fill="#4caf50" transform="rotate(-30 -10 180)" /></g>
+                        <g transform="translate(210,0)"> <path d="M 0 280 L 0 130" stroke="#2e7d32" stroke-width="3" fill="none"/><circle cx="0" cy="170" r="7" fill="#d32f2f" /></g>
+                        <g transform="translate(275,0)"> <path d="M 0 280 L 0 110" stroke="#2e7d32" stroke-width="4" fill="none"/><circle cx="0" cy="150" r="8" fill="#d32f2f" /><path d="M -6 142 L 0 135 L 6 142 Z" fill="#1b5e20" /><circle cx="0" cy="95" r="3" fill="red" stroke="black" /></g>
+                        <g transform="translate(340,0)"> <path d="M 0 280 L 0 130" stroke="#2e7d32" stroke-width="3" fill="none"/><circle cx="0" cy="170" r="7" fill="#d32f2f" /></g>
+                        <g transform="translate(390,0)"> <path d="M 0 280 L 0 140" stroke="#2e7d32" stroke-width="3" fill="none"/><circle cx="0" cy="190" r="7" fill="#d32f2f" /><ellipse cx="10" cy="160" rx="8" ry="4" fill="#4caf50" transform="rotate(30 10 160)" /></g>
+                        <g transform="translate(440,0)"> <path d="M 0 280 L 0 160" stroke="#2e7d32" stroke-width="3" fill="none"/><circle cx="0" cy="220" r="7" fill="#d32f2f" /></g>
                     </g>
 
                     <g class="item-interativo" onclick="mostrarInfo('pessoas')">
-                        <ellipse cx="110" cy="195" rx="18" ry="5" fill="#f5deb3" stroke="#8b4513" />
-                        <path d="M 100 195 Q 110 180 120 195" fill="#f5deb3" stroke="#8b4513" />
-                        <circle cx="110" cy="208" r="8" fill="#ffdbac" />
-                        <rect x="102" y="216" width="16" height="30" fill="#1e88e5" rx="3" />
-                    </g>
-
-                    <g class="item-interativo" onclick="mostrarInfo('pessoas')">
-                        <path d="M 330 205 Q 340 195 350 205" fill="#f06292" /> <rect x="340" y="203" width="15" height="3" fill="#f06292" rx="2" /> <circle cx="340" cy="215" r="8" fill="#8d5524" />
-                        <rect x="332" y="223" width="16" height="25" fill="#f48fb1" rx="5" />
+                        <g transform="translate(40,20)">
+                            <ellipse cx="0" cy="195" rx="18" ry="5" fill="#f5deb3" stroke="#8b4513" />
+                            <path d="M -10 195 Q 0 180 10 195" fill="#f5deb3" stroke="#8b4513" />
+                            <circle cx="0" cy="208" r="8" fill="#ffdbac" />
+                            <rect x="-8" y="216" width="16" height="30" fill="#1e88e5" rx="3" />
+                        </g>
+                        <g transform="translate(490,20)">
+                            <path d="M -10 195 Q 0 185 10 195" fill="#f06292" />
+                            <rect x="0" y="193" width="15" height="3" fill="#f06292" rx="2" />
+                            <circle cx="0" cy="205" r="8" fill="#8d5524" />
+                            <rect x="-8" y="213" width="16" height="25" fill="#f48fb1" rx="5" />
+                        </g>
                     </g>
 
                     <g id="irrigation" class="item-interativo" onclick="mostrarInfo('agua')">
-                        <rect x="40" y="255" width="370" height="8" fill="#0288d1" rx="4" />
-                        <circle cx="225" cy="260" r="1.5" fill="white" class="gota" />
+                        <rect x="40" y="275" width="470" height="8" fill="#0288d1" rx="4" />
+                        <circle cx="275" cy="280" r="1.5" fill="white" class="gota" />
                     </g>
                 </svg>
             </div>
 
             <div id="info-box">
-                <p id="detalhe">Clique nas pessoas ou na produção!</p>
+                <p id="detalhe">Explore a estufa clicando nos elementos!</p>
             </div>
-        </section>
-
-        <section class="sustentabilidade">
-            <h3>Pessoas Protegidas, Campo Forte</h3>
-            <p>A sustentabilidade começa com o respeito e a proteção de quem trabalha na terra.</p>
         </section>
     </main>
 
