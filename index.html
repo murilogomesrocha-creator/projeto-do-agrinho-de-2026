@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agrinho 2026 - Super Estufa Industrial</title>
+    <title>Agrinho 2026 - Colheita Sustentável</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>🍅 Super Estufa de Tomates Sustentável</h1>
-        <p>Alta Produtividade com Respeito à Natureza</p>
+        <p>Inovação e Tradição no Campo</p>
     </header>
 
     <main>
@@ -22,44 +22,40 @@
 
                     <g id="solar" class="item-interativo" onclick="mostrarInfo('energia')">
                         <rect x="200" y="20" width="200" height="40" fill="#1a237e" rx="5" />
-                        <line x1="200" y1="40" x2="400" y2="40" stroke="white" stroke-width="1" opacity="0.4"/>
-                        <line x1="266" y1="20" x2="266" y2="60" stroke="white" stroke-width="1" opacity="0.4"/>
-                        <line x1="333" y1="20" x2="333" y2="60" stroke="white" stroke-width="1" opacity="0.4"/>
+                        <line x1="200" y1="40" x2="400" y2="40" stroke="white" stroke-width="1" opacity="0.3"/>
                     </g>
 
                     <g id="plants" class="item-interativo" onclick="mostrarInfo('biologico')">
-                        <path d="M 100 320 L 100 150" stroke="#2e7d32" stroke-width="4" fill="none"/>
-                        <circle cx="95" cy="220" r="7" fill="#d32f2f" />
-                        <circle cx="105" cy="225" r="7" fill="#d32f2f" />
-                        <circle cx="100" cy="210" r="7" fill="#d32f2f" />
-                        
-                        <path d="M 200 320 L 200 130" stroke="#2e7d32" stroke-width="4" fill="none"/>
-                        <circle cx="195" cy="180" r="7" fill="#d32f2f" />
-                        <circle cx="205" cy="185" r="7" fill="#d32f2f" />
-                        <circle cx="200" cy="170" r="7" fill="#d32f2f" />
-
-                        <path d="M 300 320 L 300 110" stroke="#2e7d32" stroke-width="5" fill="none"/>
-                        <circle cx="295" cy="150" r="8" fill="#d32f2f" />
-                        <circle cx="305" cy="155" r="8" fill="#d32f2f" />
-                        <circle cx="300" cy="140" r="8" fill="#d32f2f" />
-                        <circle cx="300" cy="90" r="4" fill="red" stroke="black" /> <path d="M 400 320 L 400 130" stroke="#2e7d32" stroke-width="4" fill="none"/>
-                        <circle cx="395" cy="190" r="7" fill="#d32f2f" />
-                        <circle cx="405" cy="195" r="7" fill="#d32f2f" />
-                        <circle cx="400" cy="180" r="7" fill="#d32f2f" />
-
-                        <path d="M 500 320 L 500 150" stroke="#2e7d32" stroke-width="4" fill="none"/>
-                        <circle cx="495" cy="230" r="7" fill="#d32f2f" />
-                        <circle cx="505" cy="235" r="7" fill="#d32f2f" />
+                        <g transform="translate(100,0)">
+                            <path d="M 0 320 L 0 160" stroke="#2e7d32" stroke-width="4" fill="none"/>
+                            <circle cx="-5" cy="220" r="7" fill="#d32f2f" /><circle cx="5" cy="225" r="7" fill="#d32f2f" />
+                        </g>
+                        <g transform="translate(300,0)">
+                            <path d="M 0 320 L 0 110" stroke="#2e7d32" stroke-width="5" fill="none"/>
+                            <circle cx="-5" cy="150" r="8" fill="#d32f2f" /><circle cx="5" cy="155" r="8" fill="#d32f2f" /><circle cx="0" cy="140" r="8" fill="#d32f2f" />
+                            <circle cx="0" cy="95" r="4" fill="red" stroke="black" /> 
+                        </g>
+                        <g transform="translate(500,0)">
+                            <path d="M 0 320 L 0 160" stroke="#2e7d32" stroke-width="4" fill="none"/>
+                            <circle cx="-5" cy="230" r="7" fill="#d32f2f" /><circle cx="5" cy="235" r="7" fill="#d32f2f" />
+                        </g>
                     </g>
 
                     <g class="item-interativo" onclick="mostrarInfo('pessoas')">
                         <ellipse cx="140" cy="245" rx="20" ry="6" fill="#f5deb3" stroke="#8b4513" />
                         <circle cx="140" cy="258" r="9" fill="#ffdbac" />
                         <rect x="131" y="267" width="18" height="35" fill="#1e88e5" rx="3" />
-                        <rect x="110" y="275" width="24" height="15" fill="#d7ccc8" stroke="#8d6e63" rx="2" /> <path d="M 450 245 Q 460 235 470 245" fill="#f06292" />
+                        
+                        <path d="M 105 275 Q 105 295 125 295 Q 145 295 145 275 Z" fill="#d2b48c" stroke="#a0522d" />
+                        <path d="M 105 275 Q 125 265 145 275" fill="none" stroke="#a0522d" stroke-width="1.5" /> <circle cx="125" cy="275" r="4" fill="#d32f2f" />
+
+                        <path d="M 450 245 Q 460 235 470 245" fill="#f06292" />
                         <circle cx="460" cy="255" r="9" fill="#8d5524" />
                         <rect x="451" y="264" width="18" height="30" fill="#f48fb1" rx="5" />
-                        <rect x="475" y="270" width="24" height="15" fill="#d7ccc8" stroke="#8d6e63" rx="2" /> </g>
+                        
+                        <path d="M 465 270 Q 465 290 485 290 Q 505 290 505 270 Z" fill="#d2b48c" stroke="#a0522d" />
+                        <path d="M 465 270 Q 485 260 505 270" fill="none" stroke="#a0522d" stroke-width="1.5" /> <circle cx="480" cy="270" r="4" fill="#d32f2f" /><circle cx="490" cy="270" r="4" fill="#d32f2f" />
+                    </g>
 
                     <g id="irrigation" class="item-interativo" onclick="mostrarInfo('agua')">
                         <rect x="50" y="315" width="500" height="10" fill="#0288d1" rx="5" />
@@ -69,7 +65,7 @@
             </div>
 
             <div id="info-box">
-                <p id="detalhe">Explore a nossa estufa de alta produtividade!</p>
+                <p id="detalhe">Passe o mouse ou clique nos itens para ver a colheita!</p>
             </div>
         </section>
     </main>

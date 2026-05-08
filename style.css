@@ -1,5 +1,5 @@
 body {
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
     background-color: #f1f8e9;
     color: #1b5e20;
     margin: 0;
@@ -9,7 +9,8 @@ body {
 header {
     background-color: #d32f2f;
     color: white;
-    padding: 30px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .container-interativo {
@@ -17,29 +18,28 @@ header {
     display: inline-block;
     padding: 20px;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
     margin: 20px auto;
 }
 
 .item-interativo {
     cursor: pointer;
-    transition: transform 0.2s ease;
+    transition: 0.2s;
 }
 
 .item-interativo:hover {
-    transform: scale(1.01);
     filter: brightness(1.1);
 }
 
 #info-box {
-    background: #ffffff;
+    background: white;
     border-left: 10px solid #4caf50;
-    padding: 25px;
+    padding: 20px;
     border-radius: 10px;
-    max-width: 600px;
+    max-width: 500px;
     margin: 20px auto;
-    font-size: 1.2rem;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    font-size: 1.1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
 .gota {
