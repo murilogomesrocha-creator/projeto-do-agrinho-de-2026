@@ -29,17 +29,7 @@ header {
 
 .item-interativo:hover {
     filter: brightness(1.1);
-    transform: scale(1.01);
-}
-
-.gota {
-    animation: cair 2s infinite linear;
-}
-
-@keyframes cair {
-    0% { transform: translateY(0); opacity: 0; }
-    50% { opacity: 1; }
-    100% { transform: translateY(8px); opacity: 0; }
+    transform: scale(1.02);
 }
 
 #info-box {
@@ -56,9 +46,18 @@ header {
 
 .sustentabilidade {
     background: #ffffff;
-    padding: 25px;
-    max-width: 650px;
+    padding: 20px;
+    max-width: 600px;
     margin: 30px auto;
     border-radius: 15px;
     border: 1px solid #c8e6c9;
+}
+
+.gota {
+    animation: cair 2s infinite linear;
+}
+
+@keyframes cair {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(10px); opacity: 0; }
 }
