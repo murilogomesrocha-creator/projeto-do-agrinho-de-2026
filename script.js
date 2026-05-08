@@ -2,9 +2,10 @@ function mostrarInfo(tipo) {
     const detalhe = document.getElementById('detalhe');
     
     const mensagens = {
-        'energia': "☀️ <strong>Energia Solar:</strong> Captamos a luz solar para manter a temperatura ideal, reduzindo custos e a pegada de carbono do cultivo.",
-        'biologico': "🐞 <strong>Controle Biológico:</strong> Plantas saudáveis com folhas verdes indicam um ambiente equilibrado, onde usamos a própria natureza para controlar pragas.",
-        'agua': "💧 <strong>Irrigação Inteligente:</strong> O sistema de gotejamento entrega a umidade exata para as raízes, preservando nossos recursos hídricos preciosos."
+        'energia': "☀️ <strong>Energia Solar:</strong> Fornece eletricidade limpa para os sistemas da estufa.",
+        'biologico': "🐞 <strong>Controle Biológico:</strong> A natureza trabalha conosco para proteger os tomates sem químicos.",
+        'agua': "💧 <strong>Irrigação Inteligente:</strong> O gotejamento automático garante que nenhuma gota seja desperdiçada.",
+        'pessoas': "👨‍🌾 <strong>Trabalho Humano:</strong> A tecnologia ajuda, mas o cuidado e o conhecimento das pessoas são essenciais para um futuro sustentável no agro!"
     };
 
     detalhe.innerHTML = mensagens[tipo];

@@ -15,7 +15,7 @@
     <main>
         <section id="projeto">
             <h2>Tecnologia e Equilíbrio</h2>
-            <p>Clique nos elementos da estufa para entender o funcionamento sustentável.</p>
+            <p>Clique nos elementos da estufa e nas pessoas para entender o funcionamento.</p>
             
             <div class="container-interativo">
                 <svg width="400" height="320" viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg" class="svg-estufa">
@@ -29,26 +29,20 @@
                         <line x1="200" y1="30" x2="200" y2="65" stroke="white" stroke-width="1" opacity="0.4"/>
                     </g>
 
+                    <g class="item-interativo" onclick="mostrarInfo('pessoas')">
+                        <circle cx="70" cy="190" r="10" fill="#ffdbac" /> <rect x="60" y="200" width="20" height="40" fill="#1e88e5" rx="5" /> <rect x="62" y="240" width="6" height="20" fill="#0d47a1" /> <rect x="72" y="240" width="6" height="20" fill="#0d47a1" /> <path d="M 60 185 L 80 185 L 70 175 Z" fill="#795548" /> </g>
+
                     <g id="plants" class="item-interativo" onclick="mostrarInfo('biologico')">
-                        <path d="M 100 260 L 100 130" stroke="#2e7d32" stroke-width="4" fill="none"/>
-                        <ellipse cx="90" cy="180" rx="10" ry="5" fill="#4caf50" transform="rotate(-30 90 180)" />
-                        <ellipse cx="110" cy="220" rx="10" ry="5" fill="#4caf50" transform="rotate(30 110 220)" />
-                        <circle cx="100" cy="210" r="9" fill="#d32f2f" />
-                        <path d="M 95 202 L 100 195 L 105 202 Z" fill="#1b5e20" /> <path d="M 200 260 L 200 110" stroke="#2e7d32" stroke-width="4" fill="none"/>
+                        <path d="M 200 260 L 200 110" stroke="#2e7d32" stroke-width="4" fill="none"/>
                         <ellipse cx="185" cy="140" rx="12" ry="6" fill="#4caf50" transform="rotate(-20 185 140)" />
-                        <ellipse cx="215" cy="210" rx="12" ry="6" fill="#4caf50" transform="rotate(20 215 210)" />
                         <circle cx="200" cy="180" r="10" fill="#d32f2f" />
                         <path d="M 194 172 L 200 165 L 206 172 Z" fill="#1b5e20" />
                         <circle cx="200" cy="235" r="10" fill="#d32f2f" />
-                        <path d="M 194 227 L 200 220 L 206 227 Z" fill="#1b5e20" />
                         <circle cx="200" cy="120" r="4" fill="red" stroke="black" />
-
-                        <path d="M 300 260 L 300 130" stroke="#2e7d32" stroke-width="4" fill="none"/>
-                        <ellipse cx="290" cy="160" rx="10" ry="5" fill="#4caf50" transform="rotate(-30 290 160)" />
-                        <ellipse cx="310" cy="200" rx="10" ry="5" fill="#4caf50" transform="rotate(30 310 200)" />
-                        <circle cx="300" cy="190" r="9" fill="#d32f2f" />
-                        <path d="M 295 182 L 300 175 L 305 182 Z" fill="#1b5e20" />
                     </g>
+
+                    <g class="item-interativo" onclick="mostrarInfo('pessoas')">
+                        <circle cx="330" cy="200" r="10" fill="#8d5524" /> <rect x="320" y="210" width="20" height="35" fill="#f48fb1" rx="8" /> <rect x="322" y="245" width="6" height="15" fill="#37474f" /> <rect x="332" y="245" width="6" height="15" fill="#37474f" /> <rect x="335" y="215" width="10" height="8" fill="#ffffff" /> </g>
 
                     <g id="irrigation" class="item-interativo" onclick="mostrarInfo('agua')">
                         <rect x="50" y="255" width="300" height="10" fill="#0288d1" rx="5" />
@@ -60,13 +54,13 @@
             </div>
 
             <div id="info-box">
-                <p id="detalhe">Clique na estufa para ver as informações sustentáveis.</p>
+                <p id="detalhe">Clique nas pessoas ou na estufa para interagir!</p>
             </div>
         </section>
 
         <section class="sustentabilidade">
-            <h3>Equilíbrio entre Produção e Meio Ambiente</h3>
-            <p>O futuro do agro depende de tecnologias que respeitem o ciclo da natureza.</p>
+            <h3>Pessoas e Tecnologia no Campo</h3>
+            <p>O equilíbrio sustentável só acontece com a dedicação das pessoas e o uso consciente da inovação.</p>
         </section>
     </main>
 
