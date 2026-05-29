@@ -6,7 +6,7 @@ function atualizarDados() {
     tempElement.innerText = novaTemp + "°C";
 
     if (novaTemp > 25) {
-        statusClima.innerText = "Status: Ventilação Ativa";
+        statusClima.innerText = "Status: Janelas Abertas";
         statusClima.style.color = "#ef6c00";
     } else {
         statusClima.innerText = "Status: Ideal";
@@ -26,9 +26,8 @@ function irrigar() {
 
     setTimeout(() => {
         chuva.style.display = "none";
-        umidade.innerText = "82wrapper%";
-        umidade.innerText = "82%";
-        statusAgua.innerText = "Solo Irrigado";
+        umidade.innerText = "80%";
+        statusAgua.innerText = "Solo Hidratado";
         statusAgua.style.color = "#2e7d32";
         
         tomates.forEach(tomate => {
@@ -36,7 +35,7 @@ function irrigar() {
             setTimeout(() => tomate.style.transform = "scale(1)", 400);
         });
 
-        alert("Irrigação inteligente ativada via painel mobile com sucesso!");
+        alert("Gotejamento sustentável ativado pela dupla responsável!");
     }, 2000);
 }
 

@@ -6,8 +6,8 @@
     --brilho-tomate: #ff8a80;
     --grama-escura: #2e7d32;
     --grama-clara: #66bb6a;
-    --pele: #ffdbac;
-    --uniforme: #2e7d32;
+    --pele: #fdd835;
+    --roupa-trabalho: #37474f;
 }
 
 body {
@@ -46,10 +46,10 @@ header {
     background: rgba(179, 229, 252, 0.4); border-bottom: 2px solid #90caf9;
 }
 
-/* Plantação de fundo */
+/* Plantação */
 .plantacao {
     display: flex; justify-content: space-between; width: 100%;
-    position: absolute; bottom: 40px; padding: 0 30px; box-sizing: border-box; z-index: 1;
+    position: absolute; bottom: 40px; padding: 0 40px; box-sizing: border-box; z-index: 1;
 }
 
 .tomateiro { position: relative; width: 40px; height: 180px; }
@@ -66,38 +66,35 @@ header {
 .t-2 { top: 85px; right: -8px; }
 .t-3 { top: 130px; left: -4px; }
 
-/* --- Pessoas em Código CSS --- */
+/* --- Duas Pessoas em CSS --- */
 .equipe {
     position: absolute; bottom: 40px; width: 100%;
-    display: flex; justify-content: center; gap: 60px; z-index: 2;
+    display: flex; justify-content: center; gap: 80px; z-index: 2;
 }
 
 .pessoa { position: relative; width: 50px; height: 110px; }
 .cabeca { width: 22px; height: 22px; background: var(--pele); border-radius: 50%; position: absolute; top: 12px; left: 14px; }
+.corpo { width: 36px; height: 65px; background: var(--roupa-trabalho); border-radius: 8px 8px 0 0; position: absolute; bottom: 0; left: 7px; }
 
-.corpo { 
-    width: 36px; height: 65px; background: var(--uniforme); 
-    border-radius: 10px 10px 0 0; position: absolute; bottom: 0; left: 7px; 
-}
-
-/* Detalhes da Mulher */
-.mulher .cabelo {
-    width: 26px; height: 26px; background: #4a2711; border-radius: 50% 50% 0 0;
+/* Detalhes da Pessoa 1 */
+.p1 .cabelo-longo {
+    width: 26px; height: 26px; background: #5d4037; border-radius: 50% 50% 0 0;
     position: absolute; top: 9px; left: 12px;
 }
-.mulher .tablet {
+.p1 .tablet {
     width: 18px; height: 12px; background: #00e5ff; border: 1px solid #fff;
-    border-radius: 2px; position: absolute; top: 15px; left: -8px;
+    border-radius: 2px; position: absolute; top: 18px; left: -6px;
     box-shadow: 0 0 8px #00e5ff; animation: pulsarGlow 2s infinite alternate;
 }
 
-/* Detalhes do Homem */
-.homem .bone {
-    width: 24px; height: 8px; background: #1565c0; border-radius: 5px 5px 0 0;
+/* Detalhes da Pessoa 2 */
+.p2 .corpo { background: #1565c0; } /* Roupa de cor diferente */
+.p2 .bone {
+    width: 24px; height: 7px; background: #e53935; border-radius: 4px 4px 0 0;
     position: absolute; top: 7px; left: 13px;
 }
-.homem .bone::after {
-    content: ''; position: absolute; width: 10px; height: 3px; background: #1565c0; right: -6px; top: 5px;
+.p2 .bone::after {
+    content: ''; position: absolute; width: 9px; height: 3px; background: #e53935; right: -5px; top: 4px;
 }
 
 /* --- Chão de Grama --- */
