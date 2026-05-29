@@ -1,52 +1,215 @@
+:root {
+    --verde-agrinho: #1b5e20;
+    --verde-folha: #4caf50;
+    --azul-agua: #0288d1;
+    --vermelho-tomate: #d32f2f;
+    --brilho-tomate: #ff8a80;
+    --grama-escura: #2e7d32;
+    --grama-clara: #66bb6a;
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f1f8e9;
-    color: #1b5e20;
     margin: 0;
-    text-align: center;
+    padding: 0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header {
-    background-color: #d32f2f;
+    background: linear-gradient(135deg, var(--verde-agrinho), #33691e);
     color: white;
-    padding: 25px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 100%;
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-.container-interativo {
-    background: white;
-    display: inline-block;
+.container {
+    width: 100%;
+    max-width: 800px;
     padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
-    margin: 20px auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.item-interativo {
+/* --- Cenário da Estufa Realista --- */
+.estufa-visual {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    height: 280px;
+    background: linear-gradient(to bottom, #e3f2fd, #ffffff);
+    border: 5px solid #b3e5fc;
+    border-radius: 15px 15px 0 0;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    margin-bottom: 25px;
+}
+
+.telhado-vidro {
+    position: absolute;
+    top: 0; width: 100%; height: 35px;
+    background: rgba(179, 229, 252, 0.4);
+    border-bottom: 2px solid #90caf9;
+}
+
+.plantacao {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: calc(100% - 40px);
+    width: 100%;
+    position: absolute;
+    bottom: 35px;
+    z-index: 2;
+}
+
+/* Tomateiros e Caule */
+.tomateiro {
+    position: relative;
+    width: 60px;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+}
+
+.caule {
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(to top, var(--verde-agrinho), var(--verde-folha));
+    border-radius: 3px;
+}
+
+/* Tomates Realistas (3D com gradiente esférico) */
+.tomate.realista {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    /* Efeito de sombreamento e reflexo de luz esférico */
+    background: radial-gradient(circle at 8px 8px, var(--brilho-tomate), var(--vermelho-tomate) 70%, #7f0000 100%);
+    box-shadow: 2px 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+/* Folhinha verde no topo do tomate */
+.tomate.realista::before {
+    content: '🌿';
+    font-size: 10px;
+    position: absolute;
+    top: -8px;
+    left: 4px;
+}
+
+.t-1 { top: 40px; left: 5px; }
+.t-2 { top: 75px; right: 2px; }
+.t-3 { top: 110px; left: 8px; }
+
+/* --- Chão de Grama em Código --- */
+.chao-grama {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(to bottom, var(--grama-clara), var(--grama-escura));
+    z-index: 3;
+    border-top: 2px solid #81c784;
+}
+
+.textura-grama {
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    /* Padrão linear simulando pequenos fios de grama */
+    background: repeating-linear-gradient(45deg, transparent, transparent 4px, #1b5e20 4px, #1b5e20 6px);
+}
+
+/* --- Dashboard e Botões --- */
+.dashboard {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.sensor-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    width: 160px;
+    text-align: center;
+    border-bottom: 4px solid var(--verde-folha);
+}
+
+.value {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: var(--verde-agrinho);
+    margin: 10px 0;
+}
+
+.actions { text-align: center; margin-bottom: 40px; }
+
+.btn-irrigar {
+    background: var(--azul-agua);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
     cursor: pointer;
+    box-shadow: 0 4px 10px rgba(2, 136, 209, 0.3);
     transition: 0.2s;
 }
 
-.item-interativo:hover {
-    filter: brightness(1.1);
+.btn-irrigar:hover { transform: translateY(-2px); background: #01579b; }
+
+.btn-info {
+    background: transparent;
+    color: var(--verde-agrinho);
+    border: 2px solid var(--verde-agrinho);
+    padding: 12px 26px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 12px;
+    transition: 0.2s;
 }
 
-#info-box {
-    background: white;
-    border-left: 10px solid #4caf50;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 500px;
-    margin: 20px auto;
-    font-size: 1.1rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+.btn-info:hover { background: var(--verde-agrinho); color: white; }
+
+/* Animação de Irrigação (Gotejamento) */
+.chuva {
+    position: absolute;
+    top: 35px; width: 100%; height: calc(100% - 75px);
+    background: repeating-linear-gradient(transparent, transparent 15px, #29b6f6 15px, #29b6f6 18px);
+    display: none;
+    z-index: 4;
+    opacity: 0.6;
 }
 
-.gota {
-    animation: cair 1.5s infinite linear;
+/* --- Artigo Teórico --- */
+.texto-projeto {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    line-height: 1.7;
+    border-left: 6px solid var(--verde-agrinho);
+    transition: background-color 0.5s ease;
 }
 
-@keyframes cair {
-    0% { transform: translateY(0); opacity: 1; }
-    100% { transform: translateY(15px); opacity: 0; }
-}
+.texto-projeto h2 { color: var(--verde-agrinho); margin-top: 0; }
+ul { padding-left: 20px; }
+li { margin-bottom: 10px; }
+html { scroll-behavior: smooth; }
