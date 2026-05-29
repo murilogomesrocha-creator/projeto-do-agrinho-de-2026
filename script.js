@@ -2,11 +2,10 @@ function atualizarDados() {
     const tempElement = document.getElementById('temp');
     const statusClima = document.getElementById('status-clima');
     
-    // Simulação térmica inteligente da estufa
-    let novaTemp = Math.floor(Math.random() * (29 - 21 + 1)) + 21;
+    let novaTemp = Math.floor(Math.random() * (28 - 21 + 1)) + 21;
     tempElement.innerText = novaTemp + "°C";
 
-    if (novaTemp > 26) {
+    if (novaTemp > 25) {
         statusClima.innerText = "Status: Ventilação Ativa";
         statusClima.style.color = "#ef6c00";
     } else {
@@ -27,29 +26,22 @@ function irrigar() {
 
     setTimeout(() => {
         chuva.style.display = "none";
-        umidade.innerText = "78%";
-        statusAgua.innerText = "Solo Hidratado";
+        umidade.innerText = "82wrapper%";
+        umidade.innerText = "82%";
+        statusAgua.innerText = "Solo Irrigado";
         statusAgua.style.color = "#2e7d32";
         
-        // Pulsação sutil nos tomates simulando absorção e viço
         tomates.forEach(tomate => {
-            tomate.style.transform = "scale(1.15)";
+            tomate.style.transform = "scale(1.2)";
             setTimeout(() => tomate.style.transform = "scale(1)", 400);
         });
 
-        alert("Irrigação Eco-Gotejamento concluída utilizando água coletada da chuva!");
-    }, 2500);
+        alert("Irrigação inteligente ativada via painel mobile com sucesso!");
+    }, 2000);
 }
 
 function irParaTexto() {
-    const secao = document.getElementById('secao-texto');
-    secao.scrollIntoView({ behavior: 'smooth' });
-    
-    secao.style.backgroundColor = "#f1f8e9";
-    setTimeout(() => {
-        secao.style.backgroundColor = "#ffffff";
-    }, 1200);
+    document.getElementById('secao-texto').scrollIntoView({ behavior: 'smooth' });
 }
 
-// Inicializa o monitoramento automático a cada 4 segundos
 setInterval(atualizarDados, 4000);
