@@ -35,7 +35,7 @@ function irrigar() {
             setTimeout(() => tomate.style.transform = "scale(1)", 400);
         });
 
-        alert("Gotejamento sustentável ativado pela dupla responsável!");
+        alert("Gotejamento de alta precisão ativado para toda a colheita!");
     }, 2000);
 }
 
