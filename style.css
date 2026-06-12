@@ -41,12 +41,24 @@ header {
     position: relative;
     width: 100%; max-width: 500px; height: 320px;
     background: linear-gradient(to bottom, #e3f2fd, #ffffff);
-    border: 5px solid #b3e5fc; border-radius: 15px 15px 0 0;
+    border: 5px solid #b3e5fc; border-top: none;
     overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.1);
     margin-bottom: 25px;
 }
 
-/* Filme de Cobertura Plástica */
+/* CÓDIGO DO TELHADO REALISTA EM FORMATO TRIANGULAR */
+.telhado-estrutura {
+    position: absolute; top: 0; left: 0; width: 100%; height: 50px;
+    z-index: 8; pointer-events: none;
+}
+.telhado-esquerdo, .telhado-direito {
+    position: absolute; top: 0; width: 51%; height: 4px;
+    background: var(--metal); box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.telhado-esquerdo { left: 0; transform: rotate(11deg); transform-origin: top left; }
+.telhado-direito { right: 0; transform: rotate(-11deg); transform-origin: top right; }
+
+/* Filme de Cobertura Plástica (Incluso sobre o Telhado) */
 .filme-cobertura {
     position: absolute; top: 0; left: 0; width: 100%; height: 100%;
     background: linear-gradient(125deg, 
@@ -56,13 +68,7 @@ header {
         rgba(179,229,252,0.2) 40%, 
         transparent 70%
     );
-    z-index: 10; pointer-events: none; border-radius: 10px 10px 0 0;
-}
-
-.telhado-vidro {
-    position: absolute; top: 0; width: 100%; height: 35px;
-    background: rgba(179, 229, 252, 0.4); border-bottom: 2px solid #90caf9;
-    z-index: 2;
+    z-index: 10; pointer-events: none;
 }
 
 /* Plantação verticalizada */
@@ -71,21 +77,21 @@ header {
     position: absolute; bottom: 40px; padding: 0 25px; box-sizing: border-box; z-index: 1;
 }
 
-.tomateiro { position: relative; width: 35px; height: 240px; display: flex; justify-content: center; }
+.tomateiro { position: relative; width: 35px; height: 230px; display: flex; justify-content: center; }
 .caule { width: 5px; height: 85%; background: linear-gradient(to top, var(--verde-agrinho), var(--verde-folha)); border-radius: 3px; position: absolute; bottom: 0; z-index: 2; }
 
-/* Ganchos e Fios Tutores */
+/* Ganchos presos na inclinação do Telhado */
 .gancho {
-    position: absolute; top: -15px; width: 10px; height: 8px;
+    position: absolute; top: -5px; width: 10px; height: 8px;
     border: 2px solid var(--metal); border-bottom: none; border-left: none;
     border-radius: 0 4px 4px 0; transform: rotate(-20deg); z-index: 3;
 }
 .fio-tutor {
-    position: absolute; top: -10px; width: 1px; height: 95%;
+    position: absolute; top: 0; width: 1px; height: 95%;
     background-color: rgba(120, 144, 156, 0.6); z-index: 1;
 }
 
-/* CÓDIGO DO MANJERICÃO */
+/* Manjericão */
 .manjericao {
     position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
     width: 18px; height: 14px; z-index: 3;
@@ -96,7 +102,7 @@ header {
 .manjericao::before { left: -2px; transform: rotate(-20deg); }
 .manjericao::after { right: -2px; transform: rotate(20deg); border-radius: 0 9px 0 9px; }
 
-/* CÓDIGO DA ERVA-DOCE (Ramos finos e altos) */
+/* Erva-doce */
 .erva-doce {
     position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
     width: 16px; height: 24px; z-index: 3;
@@ -106,7 +112,7 @@ header {
     box-shadow: -4px -3px 0 var(--verde-claro), 4px -6px 0 var(--verde-claro); border-radius: 2px;
 }
 
-/* CÓDIGO DA SALSINHA (Arbusto recortado e ramificado) */
+/* Salsinha */
 .salsinha {
     position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
     width: 20px; height: 14px; z-index: 3;
@@ -125,9 +131,9 @@ header {
 }
 .tomate.realista::before { content: '🌿'; font-size: 7px; position: absolute; top: -7px; left: 3px; }
 
-.t-1 { top: 90px; left: -9px; }
-.t-2 { top: 135px; right: -9px; }
-.t-3 { top: 180px; left: -5px; }
+.t-1 { top: 80px; left: -9px; }
+.t-2 { top: 125px; right: -9px; }
+.t-3 { top: 170px; left: -5px; }
 
 /* --- Pessoas --- */
 .equipe {
@@ -193,7 +199,7 @@ header {
 .btn-info:hover { background: var(--verde-agrinho); color: white; }
 
 .chuva {
-    position: absolute; top: 35px; width: 100%; height: calc(100% - 75px);
+    position: absolute; top: 40px; width: 100%; height: calc(100% - 80px);
     background: repeating-linear-gradient(transparent, transparent 15px, #29b6f6 15px, #29b6f6 18px);
     display: none; z-index: 6; opacity: 0.5;
 }
