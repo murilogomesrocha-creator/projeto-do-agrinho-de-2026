@@ -63,7 +63,7 @@ header {
     z-index: 2;
 }
 
-/* Plantação verticalizada */
+/* Plantação */
 .plantacao {
     display: flex; justify-content: space-between; width: 100%;
     position: absolute; bottom: 40px; padding: 0 25px; box-sizing: border-box; z-index: 1;
@@ -72,7 +72,7 @@ header {
 .tomateiro { position: relative; width: 35px; height: 240px; display: flex; justify-content: center; }
 .caule { width: 5px; height: 85%; background: linear-gradient(to top, var(--verde-agrinho), var(--verde-folha)); border-radius: 3px; position: absolute; bottom: 0; z-index: 2; }
 
-/* CÓDIGO DOS GANCHOS E FIOS TUTORES */
+/* Ganchos e Fios */
 .gancho {
     position: absolute; top: -15px; width: 10px; height: 8px;
     border: 2px solid var(--metal); border-bottom: none; border-left: none;
@@ -82,6 +82,28 @@ header {
     position: absolute; top: -10px; width: 1px; height: 95%;
     background-color: rgba(120, 144, 156, 0.6); z-index: 1;
 }
+
+/* CÓDIGO DAS ARMADILHAS ADESIVAS AMARELAS */
+.armadilha-amarela {
+    position: absolute;
+    width: 14px;
+    height: 22px;
+    background-color: #ffd600; /* Amarelo Cromático Atractor */
+    border: 1px solid #ffb300;
+    box-shadow: 1px 2px 4px rgba(0,0,0,0.15);
+    z-index: 4;
+}
+/* Linha/Fio que segura o cartão amarelo */
+.armadilha-amarela::before {
+    content: '';
+    position: absolute;
+    top: -15px; left: 6px;
+    width: 1px; height: 15px;
+    background-color: #37474f;
+}
+/* Posicionamento alternado das placas na estufa */
+.aa-1 { top: 75px; left: 16px; }
+.aa-2 { top: 110px; right: 16px; }
 
 /* Tomates Realistas */
 .tomate.realista {
@@ -100,7 +122,7 @@ header {
 /* --- Pessoas --- */
 .equipe {
     position: absolute; bottom: 35px; width: 100%;
-    display: flex; justify-content: center; gap: 110px; z-index: 4;
+    display: flex; justify-content: center; gap: 110px; z-index: 5;
 }
 
 .pessoa { position: relative; width: 60px; height: 140px; }
