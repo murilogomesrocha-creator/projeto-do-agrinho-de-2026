@@ -1,7 +1,8 @@
 :root {
     --verde-agrinho: #1b5e20;
     --verde-folha: #4caf50;
-    --verde-manjericao: #2e7d32;
+    --verde-escuro: #2e7d32;
+    --verde-claro: #81c784;
     --azul-agua: #0288d1;
     --vermelho-tomate: #d32f2f;
     --brilho-tomate: #ff8a80;
@@ -84,19 +85,35 @@ header {
     background-color: rgba(120, 144, 156, 0.6); z-index: 1;
 }
 
-/* CÓDIGO DO MANJERICÃO (Mudas na base) */
+/* CÓDIGO DO MANJERICÃO */
 .manjericao {
     position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
-    width: 20px; height: 16px; z-index: 3;
+    width: 18px; height: 14px; z-index: 3;
 }
-/* Desenho das folhas do manjericão usando pseudoelementos */
 .manjericao::before, .manjericao::after {
-    content: ''; position: absolute; bottom: 0;
-    width: 10px; height: 12px; background: #43a047;
-    border-radius: 10px 0 10px 0;
+    content: ''; position: absolute; bottom: 0; width: 9px; height: 11px; background: #388e3c; border-radius: 9px 0 9px 0;
 }
-.manjericao::before { left: -3px; transform: rotate(-25deg); }
-.manjericao::after { right: -3px; transform: rotate(25deg); border-radius: 0 10px 0 10px; }
+.manjericao::before { left: -2px; transform: rotate(-20deg); }
+.manjericao::after { right: -2px; transform: rotate(20deg); border-radius: 0 9px 0 9px; }
+
+/* CÓDIGO DA ERVA-DOCE (Ramos finos e altos) */
+.erva-doce {
+    position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+    width: 16px; height: 24px; z-index: 3;
+}
+.erva-doce::before {
+    content: ''; position: absolute; bottom: 0; left: 4px; width: 2px; height: 100%; background: var(--verde-claro);
+    box-shadow: -4px -3px 0 var(--verde-claro), 4px -6px 0 var(--verde-claro); border-radius: 2px;
+}
+
+/* CÓDIGO DA SALSINHA (Arbusto recortado e ramificado) */
+.salsinha {
+    position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+    width: 20px; height: 14px; z-index: 3;
+}
+.salsinha::before {
+    content: '☘️'; font-size: 14px; color: #4caf50; position: absolute; bottom: -2px; left: 50%; transform: translateX(-50%);
+}
 
 /* Tomates Realistas */
 .tomate.realista {

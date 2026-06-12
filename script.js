@@ -35,7 +35,7 @@ function irrigar() {
             setTimeout(() => tomate.style.transform = "scale(1)", 400);
         });
 
-        alert("Gotejamento de alta precisão ativado para toda a colheita!");
+        alert("Gotejamento de alta precisão ativado para todo o policultivo!");
     }, 2000);
 }
 
