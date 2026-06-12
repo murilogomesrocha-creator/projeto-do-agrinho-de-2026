@@ -13,6 +13,7 @@
     --roupa-cinza: #455a64;
     --calca: #263238;
     --metal: #78909c;
+    --metal-escuro: #455a64;
 }
 
 body {
@@ -77,15 +78,14 @@ header {
     position: absolute; bottom: 40px; padding: 0 25px; box-sizing: border-box; z-index: 1;
 }
 
-.tomateiro { position: relative; width: 35px; height: 230px; display: flex; justify-content: center; }
+.tomateiro { position: relative; width: 45px; height: 230px; display: flex; justify-content: center; }
 
-/* CÓDIGO DA ANIMAÇÃO DE CRESCIMENTO */
+/* Animação de Crescimento */
 .grupo-crescimento {
     position: absolute; bottom: 0; width: 100%; height: 100%;
     transform-origin: bottom center;
     animation: crescerPlanta 12s infinite ease-in-out;
 }
-/* Delays para as plantas não crescerem todas iguais ao mesmo tempo */
 .delay-1 { animation-delay: 2s; }
 .delay-2 { animation-delay: 4s; }
 .delay-3 { animation-delay: 1s; }
@@ -103,45 +103,42 @@ header {
     background-color: rgba(120, 144, 156, 0.6); z-index: 1;
 }
 
+/* CÓDIGO DA BANCADA / MESA DE TRABALHO */
+.bancada-trabalho {
+    position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+    width: 42px; height: 32px;
+    border-top: 3px solid var(--metal);
+    border-left: 2px solid var(--metal-escuro);
+    border-right: 2px solid var(--metal-escuro);
+    background: rgba(176, 190, 197, 0.2);
+    z-index: 2; pointer-events: none;
+}
+
+/* Manjericão (Posicionado em cima da Bancada) */
+.manjericao { position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%); width: 18px; height: 14px; z-index: 3; }
+.manjericao::before, .manjericao::after { content: ''; position: absolute; bottom: 0; width: 9px; height: 11px; background: #388e3c; border-radius: 9px 0 9px 0; }
+.manjericao::before { left: -2px; transform: rotate(-20deg); }
+.manjericao::after { right: -2px; transform: rotate(20deg); border-radius: 0 9px 0 9px; }
+
+/* Erva-doce (Posicionado em cima da Bancada) */
+.erva-doce { position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%); width: 16px; height: 24px; z-index: 3; }
+.erva-doce::before { content: ''; position: absolute; bottom: 0; left: 4px; width: 2px; height: 100%; background: var(--verde-claro); box-shadow: -4px -3px 0 var(--verde-claro), 4px -6px 0 var(--verde-claro); border-radius: 2px; }
+
+/* Salsinha (Posicionado em cima da Bancada) */
+.salsinha { position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%); width: 20px; height: 14px; z-index: 3; }
+.salsinha::before { content: '☘️'; font-size: 14px; color: #4caf50; position: absolute; bottom: -2px; left: 50%; transform: translateX(-50%); }
+
 /* Porta da Estufa */
 .porta-estufa {
     position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);
     width: 75px; height: 170px; background: rgba(207, 216, 220, 0.35);
     border: 3px solid var(--metal); border-bottom: none; border-radius: 4px 4px 0 0;
-    z-index: 3; box-shadow: inset 0 0 10px rgba(255,255,255,0.5);
+    z-index: 4; box-shadow: inset 0 0 10px rgba(255,255,255,0.5);
 }
 .macaneta { position: absolute; top: 50%; right: 6px; width: 4px; height: 18px; background: #37474f; border-radius: 2px; }
 
-/* Manjericão */
-.manjericao { position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 18px; height: 14px; z-index: 2; }
-.manjericao::before, .manjericao::after { content: ''; position: absolute; bottom: 0; width: 9px; height: 11px; background: #388e3c; border-radius: 9px 0 9px 0; }
-.manjericao::before { left: -2px; transform: rotate(-20deg); }
-.manjericao::after { right: -2px; transform: rotate(20deg); border-radius: 0 9px 0 9px; }
-
-/* Erva-doce */
-.erva-doce { position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 16px; height: 24px; z-index: 2; }
-.erva-doce::before { content: ''; position: absolute; bottom: 0; left: 4px; width: 2px; height: 100%; background: var(--verde-claro); box-shadow: -4px -3px 0 var(--verde-claro), 4px -6px 0 var(--verde-claro); border-radius: 2px; }
-
-/* Salsinha */
-.salsinha { position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 20px; height: 14px; z-index: 2; }
-.salsinha::before { content: '☘️'; font-size: 14px; color: #4caf50; position: absolute; bottom: -2px; left: 50%; transform: translateX(-50%); }
-
-/* Tomates Realistas */
-.tomate.realista {
-    position: absolute; width: 22px; height: 22px; border-radius: 50%;
-    background: radial-gradient(circle at 6px 6px, var(--brilho-tomate), var(--vermelho-tomate) 70%, #7f0000 100%);
-    box-shadow: 2px 3px 5px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease;
-    z-index: 2;
-}
-.tomate.realista::before { content: '🌿'; font-size: 7px; position: absolute; top: -7px; left: 3px; }
-
-.t-1 { top: 80px; left: -9px; }
-.t-2 { top: 125px; right: -9px; }
-.t-3 { top: 170px; left: -5px; }
-
 /* --- Equipe e Pessoas --- */
-.equipe { position: absolute; bottom: 35px; width: 100%; display: flex; justify-content: center; gap: 110px; z-index: 4; }
+.equipe { position: absolute; bottom: 35px; width: 100%; display: flex; justify-content: center; gap: 110px; z-index: 5; }
 .pessoa { position: relative; width: 60px; height: 140px; }
 .cabeca { width: 20px; height: 20px; background: #ffccbc; border-radius: 50%; position: absolute; top: 10px; left: 20px; z-index: 5; }
 .pescoço { width: 6px; height: 6px; background: #e0a999; position: absolute; top: 29px; left: 27px; z-index: 4; }
@@ -162,8 +159,22 @@ header {
 .p2 .braco-esquerdoacao { width: 28px; height: 8px; background: #ffccbc; position: absolute; top: 10px; left: -20px; border-radius: 4px; transform: rotate(15deg); }
 .p2 .braco-direito { width: 8px; height: 26px; background: #ffccbc; position: absolute; top: 8px; right: -5px; border-radius: 4px; }
 
+/* Tomates Realistas */
+.tomate.realista {
+    position: absolute; width: 22px; height: 22px; border-radius: 50%;
+    background: radial-gradient(circle at 6px 6px, var(--brilho-tomate), var(--vermelho-tomate) 70%, #7f0000 100%);
+    box-shadow: 2px 3px 5px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    z-index: 2;
+}
+.tomate.realista::before { content: '🌿'; font-size: 7px; position: absolute; top: -7px; left: 3px; }
+
+.t-1 { top: 80px; left: -9px; }
+.t-2 { top: 125px; right: -9px; }
+.t-3 { top: 170px; left: -5px; }
+
 /* --- Chão de Grama --- */
-.chao-grama { position: absolute; bottom: 0; width: 100%; height: 40px; background: linear-gradient(to bottom, var(--grama-clara), var(--grama-escura)); z-index: 5; border-top: 2px solid #81c784; }
+.chao-grama { position: absolute; bottom: 0; width: 100%; height: 40px; background: linear-gradient(to bottom, var(--grama-clara), var(--grama-escura)); z-index: 6; border-top: 2px solid #81c784; }
 .textura-grama { width: 100%; height: 100%; opacity: 0.3; background: repeating-linear-gradient(45deg, transparent, transparent 4px, #1b5e20 4px, #1b5e20 6px); }
 
 /* --- Interface --- */
@@ -178,32 +189,19 @@ header {
 .btn-info { background: transparent; color: var(--verde-agrinho); border: 2px solid var(--verde-agrinho); padding: 10px 22px; border-radius: 6px; font-size: 1rem; font-weight: bold; cursor: pointer; margin-left: 10px; }
 .btn-info:hover { background: var(--verde-agrinho); color: white; }
 
-.chuva { position: absolute; top: 40px; width: 100%; height: calc(100% - 80px); background: repeating-linear-gradient(transparent, transparent 15px, #29b6f6 15px, #29b6f6 18px); display: none; z-index: 6; opacity: 0.5; }
+.chuva { position: absolute; top: 40px; width: 100%; height: calc(100% - 80px); background: repeating-linear-gradient(transparent, transparent 15px, #29b6f6 15px, #29b6f6 18px); display: none; z-index: 7; opacity: 0.5; }
 
 .texto-projeto { background: #ffffff; padding: 25px; border-radius: 12px; max-width: 600px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); line-height: 1.6; border-left: 6px solid var(--verde-agrinho); }
 .texto-projeto h2 { color: var(--verde-agrinho); margin-top: 0; }
 html { scroll-behavior: smooth; }
 
-/* CONFIGURAÇÃO KEYFRAMES DO CRESCIMENTO */
+/* Configuração Keyframes do Crescimento */
 @keyframes crescerPlanta {
-    0% {
-        transform: scaleY(0.05);
-        opacity: 0.3;
-    }
-    15% {
-        opacity: 1;
-    }
-    75% {
-        transform: scaleY(1);
-    }
-    90% {
-        transform: scaleY(1);
-        opacity: 1;
-    }
-    100% {
-        transform: scaleY(1);
-        opacity: 0; /* Desaparece suavemente para simular a colheita antes de reiniciar */
-    }
+    0% { transform: scaleY(0.05); opacity: 0.3; }
+    15% { opacity: 1; }
+    75% { transform: scaleY(1); }
+    90% { transform: scaleY(1); opacity: 1; }
+    100% { transform: scaleY(1); opacity: 0; }
 }
 
 @keyframes pulsarGlow {
