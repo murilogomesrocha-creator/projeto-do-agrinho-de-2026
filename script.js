@@ -31,7 +31,7 @@ function irrigar() {
         statusAgua.style.color = "#2e7d32";
         
         tomates.forEach(tomate => {
-            tomate.style.transform = "scale(1.2)";
+            tomate.style.transform = "scale(1.3)";
             setTimeout(() => tomate.style.transform = "scale(1)", 400);
         });
 
